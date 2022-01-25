@@ -1,14 +1,13 @@
-.parent {
-  width: 300px;
-  height: 400px;
-  background-color: royalblue;
+div {
+  font-size: 70px;
 }
 
-.child {
-  width: 100px;
-  height: inherit;
-  background-color: inherit;
-  position: fixed;
-  top: 100px;
-  right: 10px;
+div.hello {
+  color: rgb(65, 189, 65);
 }
+
+.hello {
+  color: red;
+}
+
+/* # < elem < class < id */
