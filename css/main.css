@@ -1,19 +1,14 @@
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
-  transition: 1s
-}
-
-.box:active {
+.parent {
   width: 300px;
+  height: 400px;
   background-color: royalblue;
 }
 
-.focus {
-  width: 200px;
-}
-
-.focus:focus {
-  background: linear-gradient(to right, orange, white);
+.child {
+  width: 100px;
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 100px;
+  right: 10px;
 }
