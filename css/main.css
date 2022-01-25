@@ -2,4 +2,18 @@
   width: 100px;
   height: 100px;
   background-color: orange;
+  transition: 1s
+}
+
+.box:active {
+  width: 300px;
+  background-color: royalblue;
+}
+
+.focus {
+  width: 200px;
+}
+
+.focus:focus {
+  background: linear-gradient(to right, orange, white);
 }
