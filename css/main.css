@@ -1,13 +1,13 @@
-div {
-  font-size: 70px;
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
 }
 
-div.hello {
-  color: rgb(65, 189, 65);
+.item:first-child {
+  border: 4px solid tomato;
+  padding: 20px;
+  box-sizing: border-box; 
 }
 
-.hello {
-  color: red;
-}
-
-/* # < elem < class < id */
+/* box-sizing: border-box; : 요소에 지정한 가로, 세로 너비를 명시한 그대로 내부 여백과 테두리를 추가하고 싶을 때 이거 추가 */
