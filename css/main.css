@@ -1,9 +1,10 @@
 div {
-    width: 200px;
-    height: 200px;
+    width: 600px;
+    height: 1500px;
     background-color: orange;
     background-image: url("https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg");
-    background-size: 50%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
+    background-attachment: fixed;
   }
