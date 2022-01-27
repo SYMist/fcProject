@@ -7,4 +7,6 @@ div {
     background-repeat: no-repeat;
     background-position: center; 
     background-attachment: fixed;
+
+    /* 애플 사이트처럼 만드려면 background-attachment를 fixed로 하면 될 듯? */
   }
