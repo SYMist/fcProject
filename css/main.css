@@ -1,12 +1,30 @@
-div {
-    width: 600px;
-    height: 1500px;
-    background-color: orange;
-    background-image: url("https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
+.container {
+  width: 300px;
+  background-color: royalblue;
+  position: relative;
+}
 
-    /* 애플 사이트처럼 만드려면 background-attachment를 fixed로 하면 될 듯? */
-  }
+.container .item {
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  border: 4px dashed tomato;
+  background-color: orange;
+}
+
+.container .item:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
+
+.container .item:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.container .item:nth-child(3) {
+  /* position: fixed; */
+  z-index: 1;
+}

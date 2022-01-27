@@ -1,0 +1,12 @@
+1. 
+position:relative를 이용하는 배치는 실제로 거의 사용되지 않음
+
+2.
+absolute는 'position 상' 부모 요소를 기준으로 배치함. 무조건 부모 요소를 기준으로 배치하는 게 아님.
+- 부모 요소의 position이 static이면 'position 상' 부모 요소가 아님. 
+- 부모 요소의 position이 relativeaus 'position 상' 부모 요소임을 의미.
+- 'positon:relative'의 역할은 'position:absolute'를 가진 요소의 기준 역할. (relative가 제일 무난함)
+- 'position:static'은 없는 거랑 마찬가지
+
+3.
+position이 있는 요소가 요소 쌓임의 우선 조건이다. (더 위에 쌓인다.)
