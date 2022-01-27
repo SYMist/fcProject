@@ -1,6 +1,6 @@
 .container {
-  width: 1500px;
-  height: 2000px;
+  width: 800px;
+  height: 500px;
   background-color: royalblue;
   display: flex;
   flex-wrap: wrap;
@@ -13,5 +13,6 @@
   border: 4px dashed tomato;
   background-color: orange;
   height: 200px;
-  width: 500px;
+  width: 100px;
+  flex-basis: 0;
 }

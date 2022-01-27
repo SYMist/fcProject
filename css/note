@@ -17,5 +17,10 @@ flex-direction: 부모 요소에 쓰이며, 자식 주축 변경(row, row-revers
 justify-content: 부모 요소에 쓰이며, 자식 수평 정렬 (center, space-between, left, right, ..)
 align-content: 부모 요소에 쓰이며, 자식 수직 정렬 (stretch, center, flex-start, flex-end, ..)
 flex-wrap: 부모 요소에 쓰이며, 줄바꿈 처리(wrap)
-align-content: 교차 축(수직)의 여러 줄 정렬 (그냥 싹 다 몰아서 정렬함)
-align-items: 교차 축(수직)의 한 줄 정렬 (각 줄마다 정렬함)
+align-content: 부모 요소에 쓰이며, 교차 축(수직)의 여러 줄 정렬 (그냥 싹 다 몰아서 정렬함)
+align-items: 부모 요소에 쓰이며, 교차 축(수직)의 한 줄 정렬 (각 줄마다 정렬함)
+
+order: 자식 요소에 쓰이며, 순서를 정렬함
+flex-grow: 자식 요소에 쓰이며, 증가 너비 비율을 결정함 (아이템이 있는 공간을 제외한 공간을 채울 비율)
+flex-shrink: 자식 요소에 쓰이며, 감소 너비 비율을 결정함 (flex-shrink:0으로 설정하면 container의 width가 작아질 때 같이 작아지는 걸 막을 수 있다.)
+flex-basis: 자식 요소에 쓰이며, 공간을 배분하기 전 기본 너비 (요소는 안의 content가 있어서 flex-grow 등을 설정했을 때 요소의 너비가 그와 정확하지 않다. 따라서 flex-basis:0으로 설정하여 시각적으로 정확하게 맞춘다.)
