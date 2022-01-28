@@ -41,3 +41,6 @@ perspective(n): 원근법(거리)
   - perspective는 속성일 수도, 함수일 수도 있다.
     - 속성일 때는 자식 요소에 transform을 주고, 부모 요소에 perspective를 줌
     - 함수일 때는 자식 요소에 transform을 주고 거기에 perspective를 줌
+
+6. box-sizing: border-box;
+padding, border-radius 등을 설정하면 elem의 크기가 영향을 받는데, 이러한 영향을 없애줌
