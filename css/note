@@ -44,3 +44,12 @@ perspective(n): 원근법(거리)
 
 6. box-sizing: border-box;
 padding, border-radius 등을 설정하면 elem의 크기가 영향을 받는데, 이러한 영향을 없애줌
+
+7. transition
+특정 속성을 에만 transition을 넣고 싶으면 맨 앞에 '해당 속성'을 쓴다. 여러 개를 달리 주려면 ,로 구분(ex. transform .1s, background-color 2s)
+
+8. background-
+background-repeat: 배경 반복
+background-size: 배경 사이즈
+background-image: url("사진 주소")
+background-position: 배경 위치
