@@ -1,0 +1,4 @@
+1. forEach 사용예
+  - boxEls.forEach(function (boxEl) {
+      boxEl.classList.add('')
+    })
