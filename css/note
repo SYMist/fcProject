@@ -24,3 +24,20 @@ order: 자식 요소에 쓰이며, 순서를 정렬함
 flex-grow: 자식 요소에 쓰이며, 증가 너비 비율을 결정함 (아이템이 있는 공간을 제외한 공간을 채울 비율)
 flex-shrink: 자식 요소에 쓰이며, 감소 너비 비율을 결정함 (flex-shrink:0으로 설정하면 container의 width가 작아질 때 같이 작아지는 걸 막을 수 있다.)
 flex-basis: 자식 요소에 쓰이며, 공간을 배분하기 전 기본 너비 (요소는 안의 content가 있어서 flex-grow 등을 설정했을 때 요소의 너비가 그와 정확하지 않다. 따라서 flex-basis:0으로 설정하여 시각적으로 정확하게 맞춘다.)
+
+5. 변환함수(transform)
+translate(x,y): 이동(x축, y축)
+translateX(x): 이동(x축)
+translateY(y): 이동(y축)
+scale(x,y): 크기(x축, y축)
+rotate(degree): 회전
+skewX(x): 기울임(x축)
+skewY(y): 기울임(y축)
+
+rotateX(x): 회전(x축)
+rotateY(y): 회전(y축)
+perspective(n): 원근법(거리)
+  - 원근법은 가장 앞에 작성해야 함
+  - perspective는 속성일 수도, 함수일 수도 있다.
+    - 속성일 때는 자식 요소에 transform을 주고, 부모 요소에 perspective를 줌
+    - 함수일 때는 자식 요소에 transform을 주고 거기에 perspective를 줌
