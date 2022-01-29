@@ -1,8 +1,16 @@
-const boxEl = document.querySelector('.box');
-const isContains = boxEl.classList.contains('active');
+const searchEl = document.querySelector('.search');
+const searchInputEl = searchEl.querySelector('input');
 
-if (isContains) {
-  console.log('포함됨!');
-} else {
-  console.log('포함되지 않음!');
-}
+searchEl.addEventListener('click', function() {
+  searchInputEl.focus();
+});
+
+searchInputEl.addEventListener('focus', function () {
+  searchEl.classList.add('focused');
+  searchInputEl.setAttribute('placeholder', '통합검색');
+});
+
+searchInputEl.addEventListener('blur', function () {
+  searchEl.classList.remove('focused');
+  searchInputEl.setAttribute('placeholder', '');
+});

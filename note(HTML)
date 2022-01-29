@@ -1,0 +1,29 @@
+1.
+<a href = '/'> : 해당 요소를 누르면 이 페이지의 메인페이지로 이동하겠다
+
+2. 
+img는 기본적으로 inline으로 취급되기 때문에 display: block 처리를 해줘야 한다.
+
+3. 수직정렬 배치
+  div {
+  height: 75px;
+  position: absolute; (조건)
+  top: 0; (조건)
+  bottom: 0; (조건)
+  margin: auto 0; (조건)
+}
+
+4. 수평정렬 배치
+  div {
+  width: 75px;
+  position: absolute; (조건)
+  left: 0; (조건)
+  right: 0; (조건)
+  margin: 0 auto; (조건)
+}
+
+5. <a href="javascript:void(0)"></a>
+링크가 들어갈건데 아직 완성이 안됐을 때 쓰는 거
+
+6. position:absolute;
+이거는 자동으로 display가 block으로 바뀜
