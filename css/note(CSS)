@@ -53,3 +53,6 @@ background-repeat: 배경 반복
 background-size: 배경 사이즈
 background-image: url("사진 주소")
 background-position: 배경 위치
+
+9. cursor: pointer:
+커서가 손가락 모양으로 바뀜
