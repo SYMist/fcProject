@@ -82,3 +82,23 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.remove('hide');
   }
 });
+
+function random(max, min) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
+
+function floatingObject(selector, delay, size) {
+  // gsap.to(요소(선택자), 애니메이션 동작 시간, 옵션)
+  gsap.to(selector, random(2.5, 1.5), {
+    y: size,
+    repeat: -1,
+    //repeat에 -1 넣으면 무한반복
+    yoyo: true,
+    //yoyo는 한번 진행된 애니메이션을 다시 뒤로 재생함을 의미
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  });
+}
+floatingObject('.floating1', 1, 15);
+floatingObject('.floating2', .5, 15);
+floatingObject('.floating3', 1.5, 20);
