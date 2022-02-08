@@ -102,3 +102,14 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+const spyEls = document.querySelectorAll();
+spyEls.forEach(function(spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      triggerHook: .8 // 뷰포트의 가장 위가 0, 가장 아래가 1, 0.8쯤 지점에 triggerHook을 걸었음 = 내가 트리거 건 요소가 0.8 위치에 지정할 때 실행
+     })
+    .setClassToggle()
+    .addTo();
+});
