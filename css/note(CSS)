@@ -70,3 +70,21 @@ background-position: 배경 위치
 
 .container 클래스 객체의 height가 width * xx임
 (16:9 하려면 xx에 56.25 넣으면 됨)
+
+11. 수직정렬 배치
+  div {
+  height: 75px;
+  position: absolute; (조건)
+  top: 0; (조건)
+  bottom: 0; (조건)
+  margin: auto 0; (조건)
+}
+
+12. 수평정렬 배치
+  div {
+  width: 75px;
+  position: absolute; (조건)
+  left: 0; (조건)
+  right: 0; (조건)
+  margin: 0 auto; (조건)
+}
