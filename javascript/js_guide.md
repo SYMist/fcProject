@@ -27,3 +27,6 @@ timeout(() => {
   console.log('Done!')
 })
 ```
+
+## 5. Prototype
+https://medium.com/@bluesh55/javascript-prototype-이해하기-f8e67c286b67
