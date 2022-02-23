@@ -85,3 +85,68 @@ const timer = {
   }
 }
 //화살표 함수가 this를 정의할 때는 자신이 만들어진 그 함수 범위에서 정의되기 때문. 화살표 함수를 감싸고 있는 추가적인 함수범위에서 정의된다는 것. => setTimeout이나 setInterval 등 timer 함수를 사용할 때는 콜백으로 일반함수보다는 화살표함수를 쓰는 게 활용도가 더 높음.
+```
+## 7. Class 키워드
+```javascript
+function User(first, last) {
+  this.firstName = first
+  this.lastName = last
+}
+
+User.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`
+}
+```
+위의 코드는 아래처럼 쓸 수 있다.
+```javascript
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
+```
+## 8. 상속(확장)
+class로 객체를 만든다.
+```javascript
+class Vehicle {
+  constructor(name, wheel) {
+    this.name = name
+    this.wheel = wheel
+  }
+}
+
+const myVehicle = new Vehicle('운송수단', 2)
+console.log(myVehicle)
+
+```
+Vehicle 클래스를 상속하는 Bicycle을 만든다.
+```javascript
+class Bicycle extends Vehicle {
+  constructor(name, wheel) {
+    super(name, wheel)
+  }
+}
+
+const myBicycle = new Bicycle('삼천리', 2)
+const daughtersBicycle = new Bicycle('세발', 3)
+console.log(myBicycle)
+console.log(daughtersBicycle)
+```
+Vehicle 클래스를 상속하고 license 매개변수를 추가한 Car를 만든다.
+
+```javascript
+class Car extends Vehicle {
+  constructor(name, wheel, license) {
+    super(name, wheel)
+    this.license = license
+  }
+}
+const myCar = new Car('Mercedez-Benz', 4, true)
+const daughtersCar = new Car('Porsche', 4, false)
+console.log(myCar)
+console.log(daughtersCar)
+```
