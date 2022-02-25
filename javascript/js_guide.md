@@ -150,3 +150,104 @@ const daughtersCar = new Car('Porsche', 4, false)
 console.log(myCar)
 console.log(daughtersCar)
 ```
+
+## 9. forEach() vs map()
+forEach() 예
+```javascript
+const fruits = ["Apple", "Banana", "Cherry"]
+
+const a = fruits.forEach(function(fruit, index) {
+  console.log(`${fruit} - ${index}`)
+})
+console.log(a)
+// undefined
+```
+map() 예
+```javascript
+const fruits = ["Apple", "Banana", "Cherry"]
+
+const b = fruits.map(function(fruit, index) {
+  console.log(`${fruit} - ${index}`)
+})
+console.log(a)
+// ['Apple no.0', 'Banana no.1', 'Cherry no.2']
+```
+차이점: map은 인수로 사용하는 callback의 내부에서 반환하는 하나의 데이터를 가지고 새로운 배열을 만들어서 반환함.
+
+## 10. map() vs filter()
+map() 예
+```javascript
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+const a = numbers.map(number => {
+  return number < 3
+})
+console.log(a)
+// [true, true, false, false]
+// 모든 요소에 대한 새로운 배열을 만듦
+```
+filter() 예
+```javascript
+const b = numbers.filter(number => {
+  return number < 3
+})
+console.log(b)
+// [1, 2]
+// 조건을 만족하는 요소에 대한 새로운 배열을 만듦
+```
+# 11. find()
+find() 예시
+```javascript
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+const a = fruits.find(fruit => {
+  return /^B/.test(fruit)
+})
+console.log(a)
+// Banana
+```
+# 12. push(), unshift()
+push() 예시
+```javascript
+const numbers = [1, 2, 3, 4]
+numbers.push(5)
+console.log(numbers)
+// [1, 2, 3, 4, 5]
+// 원본데이터 수정
+```
+unshift() 예시
+```javascript
+const numbers = [1, 2, 3, 4]
+numbers.unshift(0)
+console.log(numbers)
+// [0, 1, 2, 3, 4, 5]
+// 원본데이터 수정
+```
+# 13. reverse(), splice()
+reverse() 예시
+```javascript
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+numbers.reverse()
+fruits.reverse()
+
+console.log(numbers)
+console.log(fruits)
+// [4, 3, 2, 1]
+// ['Cherry', 'Banana', 'Apple']
+// 원본데이터 수정
+```
+splice() 예시
+```javascript
+const numbers = [1, 2, 3, 4]
+
+numbers.splice(2, 1)
+
+console.log(numbers)
+// [1, 2, 4]
+// 원본데이터 수정
+// xx.splice(a, b, c)
+// = a번째 인수부터 b개의 인수(a번째 인수 포함)를 지우고, a인덱스에 c를 추가한다.
+```
