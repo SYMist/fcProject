@@ -251,3 +251,59 @@ console.log(numbers)
 // xx.splice(a, b, c)
 // = a번째 인수부터 b개의 인수(a번째 인수 포함)를 지우고, a인덱스에 c를 추가한다.
 ```
+## 14. Obejct.assign()
+대상객체에 출처객체의 데이터를 복사하는 것. 이 때 변수로 할당된 대상객체는 변수와 동일하다
+```javascript
+const userAge = {
+  name: 'Heropy',
+  age: 85
+}
+
+const userEmail = {
+  name: 'Heropy',
+  email: 'mmist0226@gmail.com'
+}
+
+const target = Object.assign(userAge, userEmail)
+console.log(target)
+console.log(userAge)
+console.log(target === userAge) // true
+
+// 얕은 복사할 때 쓰이기도 함 Object.assign({}, '객체')
+```
+
+## 15. 구조분해할당
+```javascript
+const user = {
+  name: 'Heropy',
+  age: 84,
+  email: 'mmist0226@gmail.com',
+  address: 'USA'
+}
+
+const {name, age, address, email} = user
+
+console.log(`사용자의 이름은 ${name}입니다.`)
+// 사용자의 이름은 Heropy입니다.
+console.log(`사용자의 나이는 ${age}입니다.`)
+// 사용자의 나이는 84입니다.
+console.log(`사용자의 이메일은 ${email}입니다.`)
+// 사용자의 이메일은 mmist0226@gmail.com입니다.
+
+const fruits = ['Apple', 'Banana', 'Cherry'] 
+const [a, b, c, d] = fruits
+console.log(a, b, c, d)
+// Apple Banana Cherry undefined
+```
+
+## 16. 전개연산자
+```javascript
+const fruits = ['Apple', 'Banana', 'Cherry', 'Orange'] 
+console.log(fruits) // ['Apple', 'Banana', 'Cherry', 'Orange']
+console.log(...fruits) // Apple Banana Cherry Orange
+
+const toObject = (a, b, ...c) => ({a, b, c})
+
+console.log(toObject(...fruits)) // {a: 'Apple', b: 'Banana', c: Array(2)}
+
+```
