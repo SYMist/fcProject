@@ -1,9 +1,11 @@
 ## 1. forEach 사용예
+---
   - boxEls.forEach(function (boxEl) {
       boxEl.classList.add('')
     })
 
 ## 2. scroll함수
+---
 window.addEventListener('scroll', _.throttle(function () {
   console.log('scroll');
 }, 300));  
@@ -11,9 +13,11 @@ window.addEventListener('scroll', _.throttle(function () {
 - _.throttle(함수, 시간) 
 
 ## 3. gsap.to 사용법
+---
 gsap.to(요소, 지속시간, 옵션);
 
 ## 4. callback 함수
+---
 함수의 인수로 사용되는 함수를 의미
 예)
 ```javascript
@@ -29,9 +33,11 @@ timeout(() => {
 ```
 
 ## 5. Prototype
+---
 https://medium.com/@bluesh55/javascript-prototype-이해하기-f8e67c286b67
 
 ## 6. this
+---
 - 일반(Normal) 함수는 호출 위치에 따라 this 정의!
 - 화살표(Arrow) 함수는 자신이 선언된 함수 범위에서 this 정의!
 예)
@@ -87,6 +93,7 @@ const timer = {
 //화살표 함수가 this를 정의할 때는 자신이 만들어진 그 함수 범위에서 정의되기 때문. 화살표 함수를 감싸고 있는 추가적인 함수범위에서 정의된다는 것. => setTimeout이나 setInterval 등 timer 함수를 사용할 때는 콜백으로 일반함수보다는 화살표함수를 쓰는 게 활용도가 더 높음.
 ```
 ## 7. Class 키워드
+---
 ```javascript
 function User(first, last) {
   this.firstName = first
@@ -110,6 +117,7 @@ class User {
 }
 ```
 ## 8. 상속(확장)
+---
 class로 객체를 만든다.
 ```javascript
 class Vehicle {
@@ -152,6 +160,7 @@ console.log(daughtersCar)
 ```
 
 ## 9. forEach() vs map()
+---
 forEach() 예
 ```javascript
 const fruits = ["Apple", "Banana", "Cherry"]
@@ -175,6 +184,7 @@ console.log(a)
 차이점: map은 인수로 사용하는 callback의 내부에서 반환하는 하나의 데이터를 가지고 새로운 배열을 만들어서 반환함.
 
 ## 10. map() vs filter()
+---
 map() 예
 ```javascript
 const numbers = [1, 2, 3, 4]
@@ -197,6 +207,7 @@ console.log(b)
 // 조건을 만족하는 요소에 대한 새로운 배열을 만듦
 ```
 # 11. find()
+---
 find() 예시
 ```javascript
 const fruits = ['Apple', 'Banana', 'Cherry']
@@ -208,6 +219,7 @@ console.log(a)
 // Banana
 ```
 # 12. push(), unshift()
+---
 push() 예시
 ```javascript
 const numbers = [1, 2, 3, 4]
@@ -225,6 +237,7 @@ console.log(numbers)
 // 원본데이터 수정
 ```
 # 13. reverse(), splice()
+---
 reverse() 예시
 ```javascript
 const numbers = [1, 2, 3, 4]
@@ -252,6 +265,7 @@ console.log(numbers)
 // = a번째 인수부터 b개의 인수(a번째 인수 포함)를 지우고, a인덱스에 c를 추가한다.
 ```
 ## 14. Obejct.assign()
+---
 대상객체에 출처객체의 데이터를 복사하는 것. 이 때 변수로 할당된 대상객체는 변수와 동일하다
 ```javascript
 const userAge = {
@@ -273,6 +287,7 @@ console.log(target === userAge) // true
 ```
 
 ## 15. 구조분해할당
+---
 ```javascript
 const user = {
   name: 'Heropy',
@@ -297,6 +312,7 @@ console.log(a, b, c, d)
 ```
 
 ## 16. 전개연산자
+---
 ```javascript
 const fruits = ['Apple', 'Banana', 'Cherry', 'Orange'] 
 console.log(fruits) // ['Apple', 'Banana', 'Cherry', 'Orange']
@@ -307,3 +323,10 @@ const toObject = (a, b, ...c) => ({a, b, c})
 console.log(toObject(...fruits)) // {a: 'Apple', b: 'Banana', c: Array(2)}
 
 ```
+
+## 17. JSON.parse(), JSON.stringify()
+---
+### JSON.parse()
+- 서버에서 유입된 데이터를 사용할 때 사용
+### JSON.stringify()
+- 서버로 데이터를 전송할 때 사용
